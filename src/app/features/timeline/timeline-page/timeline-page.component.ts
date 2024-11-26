@@ -39,12 +39,12 @@ export class TimelinePageComponent implements OnInit {
   constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
-    this.http.get(this.apiUrl).subscribe(
-      (data: any) => {
-        console.log('Datos cargados:', data); // Verificar la respuesta
-        this.events = data;
-      },
-      (error) => console.error('Error al cargar los datos:', error)
-    );
+    // this.http.get(this.apiUrl).subscribe(
+    //   (data: any) => {
+    //     console.log('Datos cargados:', data); // Verificar la respuesta
+    //     this.events = data;
+    //   },
+    //   (error) => console.error('Error al cargar los datos:', error)
+    // );
   }
 }
