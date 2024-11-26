@@ -1,0 +1,16 @@
+
+
+<div class="timeline-container" id="educacion">
+  <h1 class="timeline-title">My Education Timeline</h1>
+  <div id="timeline">
+    <!-- Los eventos serán renderizados dinámicamente -->
+    <div *ngFor="let event of events; let i = index" class="timeline-event">
+      <div class="timeline-marker"></div>
+      <div class="timeline-content">
+        <p class="timeline-date">{{ event.date }}</p>
+        <h3 class="timeline-title2">{{ event.title }}</h3>
+        <p>{{ event.description }}</p>
+      </div>
+    </div>
+  </div>
+</div>

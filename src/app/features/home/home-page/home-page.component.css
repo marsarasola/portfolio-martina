@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Doto:wght@100..900&display=swap");
+
+/* Animaciones */
+@keyframes slideFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Aplica las animaciones */
+.container h1 {
+  animation: slideFromLeft 1s ease-out;
+}
+
+.container p {
+  animation: slideFromRight 1s ease-out;
+}
+
+.btn-container {
+  animation: slideFromLeft 1.5s ease-out;
+}
+
+
+/* contenedor principal */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 30vh 20vh;
+}
+
+p,
+h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  font-family: "Doto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.gradient-text {
+  font-size: 3.6rem;
+  font-family: "bebas neue";
+  background: linear-gradient(to right, #842c8a, #f0c6c3);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.btn {
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  padding: 10px 10px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 15px;
+  margin-top: 20px;
+  transition: transform 0.2s ease, font-size 0.2s ease;
+}
+
+.btn:hover {
+  font-size: 1.3rem;
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.btn-container {
+  margin-top: 100px;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .container h1 {
+    font-size: 3rem;
+  }
+
+  .container p {
+    font-size: 1.2rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .btn {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container h1 {
+    font-size: 2.5rem;
+  }
+
+  .container p {
+    font-size: 1.2rem;
+  }
+
+  .btn {
+    font-size: 0.8rem;
+    padding: 8px 12px;
+  }
+}
