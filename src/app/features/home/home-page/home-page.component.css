@@ -89,6 +89,13 @@ h1 {
   margin-top: 100px;
 }
 
+.btn-container a.btn {
+  display: inline-block; /* Garantiza que sea un bloque para el botón */
+  text-align: center; /* Centra el texto dentro del botón */
+  white-space: nowrap; /* Evita que el texto se divida */
+}
+
+
 /* Media Queries */
 @media (max-width: 1024px) {
   .container h1 {
@@ -112,16 +119,34 @@ h1 {
 }
 
 @media (max-width: 480px) {
+  .container {
+    padding: 15vh 10vw; /* Reduce el padding */
+    text-align: center; /* Asegúrate de centrar el texto */
+    height: 100vh ;
+  }
+
   .container h1 {
-    font-size: 2.5rem;
+    font-size: 2rem; /* Reduce el tamaño de fuente */
   }
 
   .container p {
-    font-size: 1.2rem;
+    font-size: 1.1rem; /* Reduce el tamaño del párrafo */
+  }
+
+  .btn-container {
+    margin-top: 50px; /* Ajusta el margen */
   }
 
   .btn {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+    padding: 8px 10px;
+  }
+
+  .btn-container a.btn {
+    font-size: 0.9rem;
     padding: 8px 12px;
   }
+
+
 }
+

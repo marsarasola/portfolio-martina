@@ -16,12 +16,19 @@ body {
   background-image: url("../src/assets/purple-planet-dark-background-saturn-astronomy-4042x2274-6425.jpg");
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   background-attachment: fixed;
   min-height: 100vh;
   background-color: var(--bg-color);
   color: var(--text-color);
   line-height: 1.6;
   overflow-x: hidden;
+}
+
+@media (max-width: 480px) {
+  body {
+    background-position: center; /* Centra la imagen en la parte superior */
+  }
 }
 
 
