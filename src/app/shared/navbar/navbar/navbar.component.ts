@@ -12,22 +12,25 @@ import { RouterModule } from '@angular/router';
 })
 
 export class NavbarComponent implements OnInit {
-  [x: string]: any;
 
-  isScrolled = false;
+  isScrolled = false; // Indica si la página ha sido desplazada hacia abajo (scroll).
 
+    // inyecto el servicio Renderer2 para interactuar
+    // con el DOM de forma segura.
   constructor(private renderer: Renderer2) {}
 
   ngOnInit(): void {
+    // Uso Renderer2 para "escuchar" el evento de desplazamiento (scroll) en la ventana.
     this.renderer.listen(window, 'scroll', () => {
-      this.isScrolled = window.scrollY > 50; // Cambia el valor según tus necesidades
+      // Cambia el valor de isScrolled si la página se desplaza más de 50 píxeles.
+      this.isScrolled = window.scrollY > 50; 
     });
   }
 
   menuOpen = false;
 
   toggleMenu() {
-    this.menuOpen = !this.menuOpen;
+    this.menuOpen = !this.menuOpen; // Cambiamos el valor de menuOpen al opuesto cada vez que se llama.
   }
 
 }

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
@@ -10,7 +9,8 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './timeline-page.component.html',
   styleUrls: ['./timeline-page.component.css'],
 })
-export class TimelinePageComponent implements OnInit {
+export class TimelinePageComponent{
+
   events: any[] = [
     {
       title: "Universidad Nacional de Mar del Plata",
@@ -34,17 +34,4 @@ export class TimelinePageComponent implements OnInit {
     }
   ];
 
-  private apiUrl = 'http://localhost:3000/events'; // URL de la API
-
-  constructor(private http: HttpClient) {}
-
-  ngOnInit(): void {
-    // this.http.get(this.apiUrl).subscribe(
-    //   (data: any) => {
-    //     console.log('Datos cargados:', data); // Verificar la respuesta
-    //     this.events = data;
-    //   },
-    //   (error) => console.error('Error al cargar los datos:', error)
-    // );
-  }
 }

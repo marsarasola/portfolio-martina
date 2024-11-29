@@ -18,7 +18,6 @@ nav {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  /* max-width: 1200px; */
   margin: 0 auto;
   padding: 0 10px;
 }
@@ -41,10 +40,22 @@ nav {
 }
 
 .navbar-toggle {
-  display: none; /* Botón toggle para dispositivos móviles */
+  display: none; /* Botón dispositivos móviles */
   cursor: pointer;
   font-size: 1.5rem;
   color: #cecece;
+}
+
+.gradient-text {
+  font-size: 3.6rem;
+  background: linear-gradient(to right, #842c8a, #f0c6c3);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: bold;
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  padding: 5px;
 }
 
 /* Media Queries */
@@ -83,15 +94,3 @@ nav {
 }
 
 
-.gradient-text {
-  font-size: 3.6rem;
-  background: linear-gradient(to right, #842c8a, #f0c6c3);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: bold;
-  border: 2px solid var(--primary-color);
-  border-radius: 10px;
-  padding: 5px;
-
-}
