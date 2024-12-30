@@ -2,10 +2,10 @@
   <nav class="navbar">
     <div class="navbar-toggle" (click)="toggleMenu()">☰</div>
     <ul class="nav-links" [class.active]="menuOpen">
-      <li><a href="#home">Home</a></li>
-      <li> <a href="#about-me">About Me</a></li>
-      <li><a href="#educacion">Education</a></li>
-      <li><a href="#projects">Projects</a></li>
+      <li><a href="#home" (click)="scrollToSection('home', $event)" >Home</a></li>
+      <li> <a href="#about-me" (click)="scrollToSection('about-me', $event)" >About Me</a></li>
+      <li><a href="#educacion" (click)="scrollToSection('educacion', $event)" >Education</a></li>
+      <li><a href="#projects" (click)="scrollToSection('projects', $event)" >Projects</a></li>
       <li><a routerLink="/contact" class="gradient-text">Contact</a></li>
     </ul>
   </nav>
